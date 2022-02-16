@@ -21,6 +21,10 @@
 
 steps:
 
+# say hello
+- name: 'ubuntu'
+  args: ['echo', 'hello world']
+
 # Build the image that encapsulates the TFX pipeline.
 - name: 'gcr.io/cloud-builders/docker'
   args: ['build', '-t', 'gcr.io/$PROJECT_ID/tfxcovertype', '.']
